@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Tallo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0f19"/>
+      <stop offset="1" stop-color="#131a2b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#059669"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0.2" r="0.6">
+      <stop offset="0" stop-color="#2563eb" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="320" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="24" fill="url(#glow)"/>
+  <g transform="translate(72 96)">
+    <rect width="128" height="128" rx="32" fill="url(#accent)"/>
+    <g transform="translate(28 30)" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 12h54l-4.5 26H20L8 12zm0 0L5 3H-2"/>
+      <circle cx="24" cy="56" r="4" fill="#fff" stroke="none"/>
+      <circle cx="52" cy="56" r="4" fill="#fff" stroke="none"/>
+    </g>
+  </g>
+  <g font-family="'Plus Jakarta Sans', 'Segoe UI', Helvetica, Arial, sans-serif" fill="#ffffff">
+    <text x="236" y="150" font-size="64" font-weight="800" letter-spacing="-1.5">Tallo</text>
+    <text x="238" y="200" font-size="24" font-weight="500" fill="#cbd5e1">Self-hosted point of sale. Real-time across devices.</text>
+    <text x="238" y="234" font-size="24" font-weight="500" fill="#cbd5e1">One private database per store.</text>
+  </g>
+  <g transform="translate(860 82)" font-family="'Plus Jakarta Sans', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700">
+    <rect width="270" height="40" rx="20" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+    <circle cx="24" cy="20" r="5" fill="#059669"/>
+    <text x="40" y="25" fill="#e2e8f0">Live orders · stock · tickets</text>
+    <rect y="56" width="270" height="40" rx="20" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+    <circle cx="24" cy="76" r="5" fill="#2563eb"/>
+    <text x="40" y="81" fill="#e2e8f0">Counter · handheld · kitchen</text>
+    <rect y="112" width="270" height="40" rx="20" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+    <circle cx="24" cy="132" r="5" fill="#d97706"/>
+    <text x="40" y="137" fill="#e2e8f0">SQLite · TypeScript · MIT</text>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+{
+  "name": "tallo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Lightweight Point of Sale system",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "workspaces": [
+    "shared",
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w shared && npm run build -w server && npm run build -w client",
+    "start": "npm run start -w server",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "npm run typecheck -w shared && npm run typecheck -w server && npm run typecheck -w client",
+    "test": "npm run test -w shared && npm run test -w server",
+    "test:unit": "npm run test -w shared && npm run test:unit -w server",
+    "test:integration": "npm run test:integration -w server",
+    "test:watch": "npm run test:watch -w server",
+    "test:coverage": "npm run test:coverage -w shared && npm run test:coverage -w server",
+    "test:e2e": "playwright test",
+    "db:migrate": "npm run db:migrate -w server",
+    "db:seed": "npm run db:seed -w server",
+    "ci": "npm run lint && npm run typecheck && npm run test:coverage && npm run build && npm run test:e2e",
+    "docs:screenshots": "node scripts/screenshots.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
+    "concurrently": "^10.0.5",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.9",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.70.1"
+  }
+}
